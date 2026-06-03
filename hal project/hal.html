@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Lux Hotel — Роскошь в каждом моменте</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="hal.css">
+</head>
+<body>
+
+<!-- ================================================
+     NAVIGATION
+     ================================================ -->
+<nav id="nav">
+  <div class="nav-logo">
+    ✦ Grand Lux
+    <small>Hotel &amp; Resort · Уральск</small>
+  </div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#rooms"     onclick="scrollToSection('#rooms');    return false;">Номера</a>
+    <a href="#gallery"   onclick="scrollToSection('#gallery');  return false;">Галерея</a>
+    <a href="#amenities" onclick="scrollToSection('#amenities');return false;">Сервисы</a>
+    <a href="#contact"   onclick="scrollToSection('#contact');  return false;">Контакты</a>
+  </div>
+
+  <button class="nav-book" onclick="scrollToSection('#contact')">Забронировать</button>
+
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ================================================
+     HERO
+     ================================================ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">⭐ 5 Звёзд &nbsp;·&nbsp; Премиум Отель &nbsp;·&nbsp; Уральск</div>
+    <h1>Добро пожаловать в<br><em>Grand Lux Hotel</em></h1>
+    <p>Погрузитесь в мир роскоши и безупречного сервиса. Каждый номер — маленький рай в самом сердце города.</p>
+    <div class="hero-cta">
+      <a href="#rooms"   class="btn-primary" onclick="scrollToSection('#rooms');  return false;">Смотреть номера</a>
+      <a href="#contact" class="btn-outline"  onclick="scrollToSection('#contact');return false;">Забронировать</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">Листайте<span></span></div>
+</section>
+
+
+<!-- ================================================
+     STATS BAR
+     ================================================ -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">48</div>
+    <div class="stat-label">Номеров</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">15+</div>
+    <div class="stat-label">Лет опыта</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">4.9</div>
+    <div class="stat-label">Рейтинг</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">12K+</div>
+    <div class="stat-label">Гостей</div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     ROOMS
+     ================================================ -->
+<section id="rooms">
+  <div class="center">
+    <span class="section-tag">Наши номера</span>
+    <h2 class="section-title">Выберите свой<br>идеальный номер</h2>
+    <p class="section-sub">От уютных стандартных до роскошных президентских люксов — каждый номер создан для вашего комфорта</p>
+  </div>
+
+  <div class="rooms-grid">
+
+    <!-- № 101 Стандарт -->
+    <div class="room-card" onclick="openModal('modal1')">
+      <div class="room-img-wrap">
+        <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Стандартный номер 101" loading="lazy">
+        <span class="room-badge badge-teal">Стандарт</span>
+        <span class="room-num">№ 101</span>
+      </div>
+      <div class="room-info">
+        <h3 class="room-name">Стандартный номер</h3>
+        <p class="room-desc">Уютный номер с видом на город. Современный интерьер и всё необходимое для комфортного отдыха или деловой поездки.</p>
+        <div class="room-features">
+          <span class="feat">18 м²</span>
+          <span class="feat">Wi-Fi</span>
+          <span class="feat">Smart TV</span>
+          <span class="feat">Мини-бар</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">
+            <div class="price-from">от</div>
+            <div class="price-amount">4 500 ₸</div>
+            <div class="price-per">за ночь</div>
+          </div>
+          <button class="btn-book">Подробнее</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- № 205 Делюкс -->
+    <div class="room-card" onclick="openModal('modal2')">
+      <div class="room-img-wrap">
+        <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Делюкс 205" loading="lazy">
+        <span class="room-badge badge-gold">Делюкс</span>
+        <span class="room-num">№ 205</span>
+      </div>
+      <div class="room-info">
+        <h3 class="room-name">Делюкс Дабл</h3>
+        <p class="room-desc">Просторный номер с кроватью king-size, мраморной ванной и панорамным балконом с видом на центр города.</p>
+        <div class="room-features">
+          <span class="feat">28 м²</span>
+          <span class="feat">King Bed</span>
+          <span class="feat">Ванна</span>
+          <span class="feat">Балкон</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">
+            <div class="price-from">от</div>
+            <div class="price-amount">8 900 ₸</div>
+            <div class="price-per">за ночь</div>
+          </div>
+          <button class="btn-book">Подробнее</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- № 312 Junior Suite -->
+    <div class="room-card" onclick="openModal('modal3')">
+      <div class="room-img-wrap">
+        <img src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Junior Suite 312" loading="lazy">
+        <span class="room-badge badge-rose">Junior Suite</span>
+        <span class="room-num">№ 312</span>
+      </div>
+      <div class="room-info">
+        <h3 class="room-name">Джуниор Сюит</h3>
+        <p class="room-desc">Апартаменты с отдельной гостиной, дизайнерским интерьером и ванной с джакузи. Nespresso в номере.</p>
+        <div class="room-features">
+          <span class="feat">42 м²</span>
+          <span class="feat">Джакузи</span>
+          <span class="feat">Гостиная</span>
+          <span class="feat">Nespresso</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">
+            <div class="price-from">от</div>
+            <div class="price-amount">14 500 ₸</div>
+            <div class="price-per">за ночь</div>
+          </div>
+          <button class="btn-book">Подробнее</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- № 415 Семейный -->
+    <div class="room-card" onclick="openModal('modal4')">
+      <div class="room-img-wrap">
+        <img src="https://images.pexels.com/photos/2029698/pexels-photo-2029698.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Семейный 415" loading="lazy">
+        <span class="room-badge badge-teal">Семейный</span>
+        <span class="room-num">№ 415</span>
+      </div>
+      <div class="room-info">
+        <h3 class="room-name">Семейный Люкс</h3>
+        <p class="room-desc">Две спальни, детская зона и оснащённая кухня. Идеальный выбор для отдыха всей семьёй.</p>
+        <div class="room-features">
+          <span class="feat">55 м²</span>
+          <span class="feat">2 спальни</span>
+          <span class="feat">Детская зона</span>
+          <span class="feat">Кухня</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">
+            <div class="price-from">от</div>
+            <div class="price-amount">18 000 ₸</div>
+            <div class="price-per">за ночь</div>
+          </div>
+          <button class="btn-book">Подробнее</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- № 501 Пентхаус -->
+    <div class="room-card" onclick="openModal('modal5')">
+      <div class="room-img-wrap">
+        <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Пентхаус 501" loading="lazy">
+        <span class="room-badge badge-purple">Пентхаус</span>
+        <span class="room-num">№ 501</span>
+      </div>
+      <div class="room-info">
+        <h3 class="room-name">Пентхаус Сюит</h3>
+        <p class="room-desc">Частная терраса, плунжерный бассейн и вид на 360°. Личный дворецкий и трансфер включены.</p>
+        <div class="room-features">
+          <span class="feat">90 м²</span>
+          <span class="feat">Терраса</span>
+          <span class="feat">Бассейн</span>
+          <span class="feat">Дворецкий</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">
+            <div class="price-from">от</div>
+            <div class="price-amount">45 000 ₸</div>
+            <div class="price-per">за ночь</div>
+          </div>
+          <button class="btn-book">Подробнее</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- № 220 Президентский -->
+    <div class="room-card" onclick="openModal('modal6')">
+      <div class="room-img-wrap">
+        <img src="https://images.pexels.com/photos/3659683/pexels-photo-3659683.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Президентский 220" loading="lazy">
+        <span class="room-badge badge-dark">Президент</span>
+        <span class="room-num">№ 220</span>
+      </div>
+      <div class="room-info">
+        <h3 class="room-name">Президентский Люкс</h3>
+        <p class="room-desc">Вершина роскоши. Спа-зона с хамамом, частная столовая, библиотека и консьерж 24/7.</p>
+        <div class="room-features">
+          <span class="feat">120 м²</span>
+          <span class="feat">Спа-зона</span>
+          <span class="feat">Хамам</span>
+          <span class="feat">Консьерж</span>
+        </div>
+        <div class="room-footer">
+          <div class="room-price">
+            <div class="price-from">от</div>
+            <div class="price-amount">80 000 ₸</div>
+            <div class="price-per">за ночь</div>
+          </div>
+          <button class="btn-book">Подробнее</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.rooms-grid -->
+</section>
+
+
+<!-- ================================================
+     GALLERY
+     ================================================ -->
+<section id="gallery">
+  <div class="center">
+    <span class="section-tag">Атмосфера</span>
+    <h2 class="section-title">Жизнь в отеле</h2>
+    <p class="section-sub">Пространства, созданные для незабываемых впечатлений</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=900"
+           alt="Лобби" loading="lazy">
+      <span class="gallery-label">Лобби</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.pexels.com/photos/261395/pexels-photo-261395.jpeg?auto=compress&cs=tinysrgb&w=700"
+           alt="Бассейн" loading="lazy">
+      <span class="gallery-label">Бассейн</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=700"
+           alt="Ресторан" loading="lazy">
+      <span class="gallery-label">Ресторан</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=900"
+           alt="СПА" loading="lazy">
+      <span class="gallery-label">СПА & Велнес</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.pexels.com/photos/1031659/pexels-photo-1031659.jpeg?auto=compress&cs=tinysrgb&w=700"
+           alt="Вид" loading="lazy">
+      <span class="gallery-label">Панорамный вид</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     AMENITIES
+     ================================================ -->
+<section id="amenities">
+  <div class="center">
+    <span class="section-tag">Сервисы</span>
+    <h2 class="section-title">Всё для вашего<br>комфорта</h2>
+    <p class="section-sub">Уникальные услуги, которые делают пребывание незабываемым</p>
+  </div>
+
+  <div class="amenities-grid">
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#FFF0D6;">🍽️</div>
+      <h4 class="amenity-name">Ресторан</h4>
+      <p class="amenity-desc">Авторская кухня от шеф-повара с мировым именем</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#E0F8F4;">🏊</div>
+      <h4 class="amenity-name">Бассейн</h4>
+      <p class="amenity-desc">Закрытый подогреваемый бассейн, открыт 24 часа</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#F0E8FF;">💆</div>
+      <h4 class="amenity-name">Спа & Велнес</h4>
+      <p class="amenity-desc">Полный спектр релаксирующих процедур и массажей</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#FFECE5;">🏋️</div>
+      <h4 class="amenity-name">Фитнес-центр</h4>
+      <p class="amenity-desc">Современное оборудование и персональные тренеры</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#E8F4FF;">🚗</div>
+      <h4 class="amenity-name">Парковка</h4>
+      <p class="amenity-desc">Охраняемая подземная парковка для всех гостей</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#FFF0E8;">🛎️</div>
+      <h4 class="amenity-name">Консьерж 24/7</h4>
+      <p class="amenity-desc">Персональный помощник готов исполнить любое желание</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#F0FFF0;">📶</div>
+      <h4 class="amenity-name">Wi-Fi 1 Гбит/с</h4>
+      <p class="amenity-desc">Бесплатный высокоскоростной интернет во всём отеле</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon" style="background:#FFF8E0;">✈️</div>
+      <h4 class="amenity-name">Трансфер</h4>
+      <p class="amenity-desc">Комфортный трансфер аэропорт — отель на премиум-авто</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     CONTACT / BOOKING
+     ================================================ -->
+<section id="contact">
+  <div class="center">
+    <span class="section-tag">Связаться с нами</span>
+    <h2 class="section-title">Забронируйте<br>свой номер</h2>
+    <p class="section-sub">Наши специалисты ответят на все вопросы и помогут с бронированием</p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Left: info -->
+    <div class="contact-info">
+      <h3>Свяжитесь с нами</h3>
+      <p>📍 <strong>Адрес:</strong> ул. Набережная, 1, Уральск</p>
+      <p>📞 <strong>Телефон:</strong> +7 (7112) 50-50-50</p>
+      <p>✉️ <strong>Email:</strong> info@grandlux.kz</p>
+      <p>🕐 <strong>Ресепшн:</strong> 24/7</p>
+      <div class="contact-note">
+        ✅ Ранний заезд и поздний выезд по запросу<br>
+        ✅ Бесплатная отмена за 24 часа до заезда<br>
+        ✅ Завтрак включён в тариф Делюкс и выше
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="booking-form">
+      <h3>Форма бронирования</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Дата заезда</label>
+          <input type="date" id="checkin">
+        </div>
+        <div class="form-group">
+          <label>Дата выезда</label>
+          <input type="date" id="checkout">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Тип номера</label>
+        <select>
+          <option>Стандарт — от 4 500 ₸</option>
+          <option>Делюкс — от 8 900 ₸</option>
+          <option>Junior Suite — от 14 500 ₸</option>
+          <option>Семейный — от 18 000 ₸</option>
+          <option>Пентхаус — от 45 000 ₸</option>
+          <option>Президентский — от 80 000 ₸</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Имя</label>
+          <input type="text" id="guestName" placeholder="Ваше имя">
+        </div>
+        <div class="form-group">
+          <label>Телефон</label>
+          <input type="tel" id="guestPhone" placeholder="+7 (7112) ...">
+        </div>
+      </div>
+      <button class="btn-submit" onclick="submitBooking()">✦ Забронировать номер</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FOOTER
+     ================================================ -->
+<footer>
+  <p>© 2025 <strong>Grand Lux Hotel</strong> — Уральск, Казахстан. Все права защищены.</p>
+  <p>Создано с ❤️ для незабываемого отдыха</p>
+</footer>
+
+
+<!-- ================================================
+     MODAL (единый, данные подставляются через JS)
+     ================================================ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close-x" onclick="closeModal()">✕</button>
+    <img class="modal-img" src="" alt="">
+    <div class="modal-body">
+      <h2 class="modal-title"></h2>
+      <div class="modal-price"></div>
+      <p class="modal-desc"></p>
+      <div class="modal-feats"></div>
+      <button class="btn-modal-book" onclick="closeAndBook()">✦ Забронировать этот номер</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     TOAST
+     ================================================ -->
+<div id="toast"></div>
+
+
+<!-- Scripts -->
+<script src="main.js"></script>
+</body>
+</html>
